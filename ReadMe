@@ -1,0 +1,1 @@
+Note: MediatorLiveData also need to be observed to get the updated value after adding source. Refer NameActivity
