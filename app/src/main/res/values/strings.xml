@@ -8,4 +8,6 @@
     <string name="clear_text">Clear Text</string>
     <string name="connection_error">Connection Error</string>
     <string name="select_image">Select Image</string>
+    <string name="bubble_channel">bubbleChannel</string>
+    <string name="bubble_channel_description">This is the channel description for bubble</string>
 </resources>
