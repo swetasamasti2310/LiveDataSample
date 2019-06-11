@@ -1,6 +1,9 @@
 package com.example.swetakumari.livedatasample
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Intent
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AppCompatDelegate
@@ -16,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        createNotificationChannel();
         btn1.setOnClickListener {
             toggleNightMode();
         }
@@ -36,7 +40,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn5.setOnClickListener {
-            BubbleHelper.createBubble();
+            BubbleHelper.createBubble(this.applicationContext);
+        }
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // Create the NotificationChannel
+            val name = getString(R.string.bubble_channel)
+            val descriptionText = getString(R.string.bubble_channel_description)
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val mChannel = NotificationChannel(BubbleHelper.BUBBLE_NOTIF_CHANNEL_ID, name, importance)
+            mChannel.description = descriptionText
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(mChannel)
         }
     }
 

@@ -8,14 +8,17 @@
         tools:context=".Bubble.BubbleActivity"
         tools:layout_editor_absoluteY="81dp">
 
-    <Button android:id="@+id/selectImage"
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi ...Here is the bubble activity">
+
+    </TextView>
+
+    <Button android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test bubble"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"/>
 
 </LinearLayout>
