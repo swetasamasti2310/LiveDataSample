@@ -1,1 +1,10 @@
-Note: MediatorLiveData also need to be observed to get the updated value after adding source. Refer NameActivity
+This application has implementation of following on the click of different button on Main Activity:
+- Click on Button "Toggle Night Mode". It includes the implementation of setting night mode to Yes/No)
+- Click on Button "Open Name Activity" It includes the implementation of Live Data View Model introduced in Jetpack architecture.
+  It includes changing the name in the text view with the live data observer.
+  
+- Click on Button "Switch Map Activity". It includes the implementation of Transformations.map and Transformation.switchMap apis.
+
+- Click on Button "Network Operations". It includes the implementation of performing network operations. 
+
+- Click on Button "Bubble Test". It includes the implementation of bubble api introduced in android Q. Referred https://developer.android.com/preview/features/bubbles.
